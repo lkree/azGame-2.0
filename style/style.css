@@ -1,0 +1,610 @@
+html, body, p {
+  margin: 0;
+  padding: 0;
+}
+
+.startup {
+  background: url(../images/start-up-bg.gif) no-repeat center center;
+  background-size: cover;
+  width: 1366px;
+  height: 768px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.startup__popup {
+  width: 450px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15px;
+  background-color: #fff;
+  z-index: 1;
+  border-radius: 5px;
+  box-shadow: 0px 0px 12px 2px #000;
+}
+
+.startup__startLink, .startup__settingsLink {
+  font-size: 20px;
+  margin-top: 10px;
+  letter-spacing: 0.15px;
+  font-weight: 700;
+  cursor: pointer;
+  color: #000;
+  position: relative;
+}
+
+/* .startup__startLink {
+
+} */
+.startup__startLink:hover, .startup__settingsLink:hover {
+  animation: animateStartup infinite linear;
+  -webkit-animation: animateStartup infinite linear;
+  animation-duration: 1s;
+}
+
+/* .startup__settingsLink {
+
+} */
+.closeAll {
+  display: none;
+  width: 1366px;
+  height: 768px;
+  z-index: 1;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.world-wrapper {
+  border: 1px solid #000;
+  width: 1366px;
+  height: 768px;
+  position: relative;
+  margin: 0 auto;
+  background: url(../images/gameBG.jpg) no-repeat center;
+  background-size: contain;
+}
+
+.step-circle {
+  display: flex;
+  width: 35px;
+  height: 35px;
+  border-radius: 50px;
+  position: absolute;
+  justify-content: center;
+  /* background-color: #FAEE9A;
+  border-color: #fff;
+  color: green;
+  font-weight: 700; */
+  font-size: 0;
+  align-items: center;
+  cursor: default;
+}
+
+.popup {
+  width: 650px;
+  min-height: 200px;
+  position: fixed;
+  top: calc(50% - 250px);
+  right: calc(50% - 250px);
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 15px;
+  background-color: #fff;
+  z-index: 10;
+  border-radius: 5px;
+  box-shadow: 0px 0px 12px 2px #000;
+}
+
+.popup__question {
+  height: 70%;
+  display: flex;
+  margin: 15px auto;
+  justify-content: center;
+  flex-direction: column;
+  font-weight: 700;
+  font-size: 19px;
+}
+
+.popup__buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.rules__popup {
+  align-items: unset;
+  height: auto;
+  padding: 15px;
+  background-color: gray;
+}
+.rules__header {
+  margin: 0;
+  text-align: center;
+  width: 100%;
+  color: #fff;
+  font-size: 26px;
+  letter-spacing: 0.4px;
+}
+.rules__move-rule {
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+}
+.rules__chip {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: green;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  border: 2px solid #fff;
+}
+.rules__chip--move-pass {
+  background-color: red;
+}
+.rules__chip--straight-ahead {
+  background-color: orange;
+}
+.rules__chip--fall-dawn {
+  background-color: blue;
+}
+.rules__chip-description {
+  margin-left: 15px;
+}
+.rules__chip-description:hover, .rules__chip:hover, .rules__header:hover {
+  cursor: default;
+}
+.rules__submit {
+  width: 200px;
+  height: 50px;
+  align-self: center;
+  border-radius: 10px;
+  border: none;
+}
+button {
+  cursor: pointer;
+}
+.rules__submit:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 12px 2px #000;
+}
+
+.hidden {
+  display: none;
+}
+
+#wrongBtn {
+  margin-right: 10px;
+}
+
+#wrongBtn, #rightBtn {
+  cursor: pointer;
+}
+
+#teamOne {
+  background: url(../images/player1.png) no-repeat center;
+  width: 50px;
+  height: 100px;
+  background-size: contain;
+  position: absolute;
+  z-index: 2;
+  top: -70px;
+  right: -11px;
+}
+
+#teamTwo {
+  background: url(../images/player2.png) no-repeat center;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: -75px;
+  right: -31px;
+  z-index: 1;
+  background-size: contain;
+}
+
+/*.step-circle {*/
+/*background-color: transparent;*/
+/*font-size: 0;*/
+/*}*/
+#c1 {
+  bottom: 62px;
+  right: 176px;
+}
+
+#c2 {
+  bottom: 68px;
+  right: 245px;
+}
+
+#c3 {
+  bottom: 63px;
+  right: 310px;
+}
+
+#c4 {
+  bottom: 64px;
+  right: 371px;
+}
+
+#c5 {
+  bottom: 60px;
+  right: 428px;
+}
+
+#c6 {
+  bottom: 63px;
+  right: 489px;
+}
+
+#c7 {
+  bottom: 64px;
+  right: 549px;
+}
+
+#c8 {
+  bottom: 61px;
+  right: 617px;
+}
+
+#c9 {
+  bottom: 59px;
+  right: 683px;
+}
+
+#c10 {
+  bottom: 55px;
+  right: 751px;
+}
+
+#c11 {
+  bottom: 93px;
+  left: 508px;
+}
+
+#c12 {
+  bottom: 79px;
+  left: 452px;
+}
+
+#c13 {
+  bottom: 66px;
+  left: 376px;
+}
+
+#c14 {
+  bottom: 65px;
+  left: 287px;
+}
+
+#c15 {
+  bottom: 71px;
+  left: 200px;
+}
+
+#c16 {
+  bottom: 88px;
+  left: 121px;
+}
+
+#c17 {
+  bottom: 142px;
+  left: 95px;
+}
+
+#c18 {
+  bottom: 211px;
+  left: 112px;
+}
+
+#c19 {
+  bottom: 248px;
+  left: 178px;
+}
+
+#c20 {
+  bottom: 247px;
+  left: 241px;
+}
+
+#c21 {
+  bottom: 245px;
+  left: 316px;
+}
+
+#c22 {
+  bottom: 241px;
+  left: 379px;
+}
+
+#c23 {
+  bottom: 237px;
+  left: 444px;
+}
+
+#c24 {
+  bottom: 233px;
+  left: 499px;
+}
+
+#c25 {
+  bottom: 230px;
+  left: 561px;
+}
+
+#c26 {
+  bottom: 226px;
+  left: 618px;
+}
+
+#c27 {
+  bottom: 222px;
+  left: 675px;
+}
+
+#c28 {
+  bottom: 220px;
+  right: 594px;
+}
+
+#c29 {
+  bottom: 216px;
+  right: 532px;
+}
+
+#c30 {
+  bottom: 218px;
+  right: 462px;
+}
+
+#c31 {
+  bottom: 215px;
+  right: 410px;
+}
+
+#c32 {
+  bottom: 216px;
+  right: 345px;
+}
+
+#c33 {
+  bottom: 223px;
+  right: 275px;
+}
+
+#c34 {
+  bottom: 231px;
+  right: 206px;
+}
+
+#c35 {
+  bottom: 254px;
+  right: 150px;
+}
+
+#c36 {
+  bottom: 288px;
+  right: 86px;
+}
+
+#c37 {
+  bottom: 326px;
+  right: 46px;
+}
+
+#c38 {
+  bottom: 373px;
+  right: 40px;
+}
+
+#c39 {
+  bottom: 403px;
+  right: 77px;
+}
+
+#c40 {
+  bottom: 406px;
+  right: 142px;
+}
+
+#c41 {
+  bottom: 421px;
+  right: 213px;
+}
+
+#c42 {
+  bottom: 406px;
+  right: 261px;
+}
+
+#c43 {
+  bottom: 382px;
+  right: 347px;
+}
+
+#c44 {
+  bottom: 367px;
+  right: 484px;
+}
+
+#c45 {
+  bottom: 373px;
+  right: 560px;
+}
+
+#c46 {
+  bottom: 378px;
+  right: 619px;
+}
+
+#c47 {
+  bottom: 389px;
+  right: 688px;
+}
+
+#c48 {
+  bottom: 387px;
+  left: 556px;
+}
+
+#c49 {
+  bottom: 380px;
+  left: 494px;
+}
+
+#c50 {
+  top: 363px;
+  left: 433px;
+}
+
+#c51 {
+  top: 362px;
+  left: 369px;
+}
+
+#c52 {
+  top: 358px;
+  left: 309px;
+}
+
+#c53 {
+  top: 355px;
+  left: 244px;
+}
+
+#c54 {
+  top: 340px;
+  left: 174px;
+}
+
+#c55 {
+  top: 319px;
+  left: 109px;
+}
+
+#c56 {
+  top: 283px;
+  left: 73px;
+}
+
+#c57 {
+  top: 230px;
+  left: 78px;
+}
+
+#c58 {
+  top: 196px;
+  left: 116px;
+}
+
+#c59 {
+  top: 171px;
+  left: 157px;
+}
+
+#c60 {
+  top: 148px;
+  left: 212px;
+}
+
+#c61 {
+  top: 151px;
+  left: 271px;
+}
+
+#c62 {
+  top: 171px;
+  left: 321px;
+}
+
+#c63 {
+  top: 186px;
+  left: 389px;
+}
+
+#c64 {
+  top: 195px;
+  left: 457px;
+}
+
+#c65 {
+  top: 196px;
+  left: 521px;
+}
+
+#c66 {
+  top: 186px;
+  left: 601px;
+}
+
+#c67 {
+  top: 172px;
+  left: 658px;
+}
+
+#c68 {
+  top: 155px;
+  left: 716px;
+}
+
+#c69 {
+  top: 167px;
+  right: 565px;
+}
+
+#c70 {
+  top: 180px;
+  right: 493px;
+}
+
+#c71 {
+  top: 196px;
+  right: 422px;
+}
+
+#c72 {
+  top: 204px;
+  right: 349px;
+}
+
+#c73 {
+  top: 210px;
+  right: 276px;
+}
+
+#c74 {
+  top: 202px;
+  right: 197px;
+}
+
+#c75 {
+  top: 175px;
+  right: 77px;
+}
+
+@keyframes animateStartup {
+  0% {
+    top: 0px;
+  }
+  25% {
+    top: -10px;
+  }
+  50% {
+    top: 0px
+  }
+  75% {
+    top: 10px;
+  }
+  100% {
+    top: 0px;
+  }
+}

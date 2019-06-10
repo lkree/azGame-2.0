@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Game</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script src="js/questions.js" defer></script>
+    <script src="js/logic.js" defer></script>
+  </head>
+  <body>
+    <section class="startup">
+      <div class="startup__popup">
+        <a class="startup__startLink">Начать игру</a>
+        <!-- <a class="startup__settingsLink">Настройки</a>
+      </div>
+      <section class="startup__settings">
+        
+      </section> -->
+    </section>
+    <section class="rules startup hidden">
+      <div class="startup__popup rules__popup">
+        <header class="rules__header">Правила игры</header>
+        <div class="rules__move-rule">
+          <div class="rules__chip"><p>4</p></div>
+          <p class="rules__chip-description">Дополнительный ход.</p>
+        </div>
+        <div class="rules__move-rule">
+          <div class="rules__chip rules__chip--move-pass"><p>8</p></div>
+          <p class="rules__chip-description">Пропуск хода.</p>
+        </div>
+        <div class="rules__move-rule">
+          <div class="rules__chip rules__chip--straight-ahead"><p>15</p></div>
+          <p class="rules__chip-description">Перемещение вперёд.</p>
+        </div>
+        <div class="rules__move-rule">
+          <div class="rules__chip rules__chip--fall-dawn"><p>16</p></div>
+          <p class="rules__chip-description">Перемещение назад.</p>
+        </div>
+        <button class="rules__submit">Понял!</button>
+      </div>
+    </section>
+    <div class="closeAll"></div>
+    <div class="world-wrapper hidden">
+      <button class="stepBtnTeamOne">Ход работников</button>
+      <button class="stepBtnTeamTwo">Ход работодателей</button>
+    </div>
+    <div class="popup">
+      <div class="popup__question"></div>
+      <div class="popup__buttons">
+        <button id="wrongBtn">Неправильно</button>
+        <button id="rightBtn">Правильно</button>
+      </div>
+    </div>
+  </body>
+</html>
